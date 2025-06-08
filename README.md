@@ -1,5 +1,16 @@
 # ditaa-mirror
 
+> ⚠️🏗️🚧🦺🧱🪵🪨🪚🛠️👷
+> 
+> This is a working draft in progress
+> 
+> ![Loading...](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXVjejV3dnVjc2o5MXd3eXBvcDR1cHlzbHQ1Z2R6YjY0ZHpmdjJ6OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hL9q5k9dk9l0wGd4e0/giphy.gif)
+> 
+> ⚠️🏗️🚧🦺🧱🪵🪨🪚🛠️👷
+
+----
+
+
 This repo is a mirror version of the original repo project in this link: https://sourceforge.net/p/ditaa/svn/HEAD/tree/
 
 More documentation is on the way... 
@@ -43,6 +54,7 @@ config:
 flowchart TB
     %% UI Layer
     subgraph CLI_Frontend["CLI Frontend"]
+    style CLI_Frontend fill:#298F,stroke:#333,stroke-width:1px
     direction TB
         CLC["CommandLineConverter"]:::frontend
         CP["ConfigurationParser"]:::frontend
@@ -50,14 +62,17 @@ flowchart TB
     end
 
     subgraph Web_Frontend["Web Frontend"]
+    style Web_Frontend fill:#218F,stroke:#333,stroke-width:1px
     direction TB
-        subgraph "Controllers"
+        subgraph Controllers["Controllers"]
+        style Controllers fill:#FFEF,stroke:#333,stroke-width:1px
             IS["ImageServlet"]:::frontend
             RS["RestartServlet"]:::frontend
             CE["Compare"]:::frontend
         end
         
         subgraph Helpers["Helpers"]
+        style Helpers fill:#DDEF,stroke:#333,stroke-width:1px
             ER["ExternalRenderer"]:::service
             HK["HttpKit"]:::service
             IK["IOKit"]:::service
@@ -65,6 +80,7 @@ flowchart TB
         end
         
         subgraph JSP_HTML_CSS_Views["JSP/HTML/CSS Views"]
+        style JSP_HTML_CSS_Views fill:#AAEF,stroke:#333,stroke-width:1px
             JSP1["entry.jsp"]:::view
             JSP2["frames.jsp"]:::view
             HTML["ditaa.html"]:::view
@@ -75,9 +91,11 @@ flowchart TB
 
     %% Core Library
     subgraph Core_Library["Core Library"]
+    style Core_Library fill:#92D1,stroke:#333,stroke-width:1px
     direction TB
-        subgraph "Text Module"
-            direction TB
+        subgraph Text_Module["Text Module"]
+        style Text_Module fill:#DFF2,stroke:#333,stroke-width:1px
+        direction TB
             AC["AbstractCell"]:::text
             AG["AbstractionGrid"]:::text
             CS["CellSet"]:::text
@@ -88,7 +106,8 @@ flowchart TB
         end
         
         subgraph Graphics_Module["Graphics Module"]
-            direction TB
+        style Graphics_Module fill:#E2E2,stroke:#333,stroke-width:1px
+        direction TB
             D["Diagram"]:::graphics
             DS["DiagramShape"]:::graphics
             CDS["CompositeDiagramShape"]:::graphics
@@ -99,7 +118,8 @@ flowchart TB
         end
         
         subgraph Utilities["Utilities"]
-            direction TB
+        style Utilities fill:#AC99,stroke:#333,stroke-width:1px
+        direction TB
             FU["FileUtils"]:::util
             DU["DebugUtils"]:::util
             P["Pair"]:::util
@@ -111,7 +131,8 @@ flowchart TB
     Libs(("Third-Party JARs")):::external
 
     subgraph Build_and_Deployment["Build & Deployment"]
-        direction TB
+    style Build_and_Deployment fill:#EC99,stroke:#333,stroke-width:1px
+    direction TB
         BX["build.xml"]:::build
         WB["web/build.xml"]:::build
         RX["release.xml"]:::build
@@ -119,7 +140,8 @@ flowchart TB
     end
 
     subgraph Tests["Tests"]
-        direction TB
+    style Tests fill:#fF21,stroke:#333,stroke-width:1px
+    direction TB
         GTest["GridPatternTest"]:::test
         TTest["TextGridTest"]:::test
         VTest["VisualTester"]:::test
@@ -234,3 +256,65 @@ flowchart TB
 ```
 
 ------
+
+
+---
+
+<!-- 
+```mermaid
+%% Current Mermaid version
+info
+```  -->
+
+
+```mermaid
+---
+title: "CongLeSolutionX"
+author: "Cong Le"
+version: "1.0"
+license(s): "MIT, CC BY-SA 4.0"
+copyright: "Copyright (c) 2025 Cong Le. All Rights Reserved."
+config:
+  theme: base
+---
+%%%%%%%% Mermaid version v11.4.1-b.14
+%%{
+  init: {
+    'flowchart': { 'htmlLabels': false },
+    'fontFamily': 'Bradley Hand',
+    'themeVariables': {
+      'primaryColor': '#fc82',
+      'primaryTextColor': '#F8B229',
+      'primaryBorderColor': '#27AE60',
+      'secondaryColor': '#81c784',
+      'secondaryTextColor': '#6C3483',
+      'lineColor': '#F8B229',
+      'fontSize': '20px'
+    }
+  }
+}%%
+flowchart LR
+  My_Meme@{ img: "https://raw.githubusercontent.com/CongLeSolutionX/MY_GRAPHIC_ASSETS/refs/heads/Designing_graphic_syntax/MY_MEME/My-meme-icon-design.png", label: "Ăn uống gì chưa ngừi đẹp?", pos: "b", w: 200, h: 150, constraint: "on" }
+
+  Closing_quote@{ shape: braces, label: "I'll leave this Earth empty-handed anyway!<br/>YOLO" }
+    
+  My_Meme ~~~ Closing_quote
+    
+  Link_to_my_profile{{"<a href='https://github.com/CongLeSolutionX/CongLeSolutionX' target='_blank'>Click here if you care about my profile</a>"}}
+
+  Closing_quote ~~~ My_Meme
+  My_Meme animatingEdge@--> Link_to_my_profile
+  
+  animatingEdge@{ animate: true }
+
+
+
+```
+
+---
+>**Licenses:**
+>
+>- **MIT License:**  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE) - Full text in [LICENSE](LICENSE) file.
+>- **Creative Commons Attribution-ShareAlike 4.0 International**: [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) [![CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/) - Legal details in [LICENSE-CC-BY-SA-4.0](THE_PAST/LICENSE-CC-BY-SA-4.0) and at [Creative Commons official site](https://creativecommons.org/licenses/by-sa/4.0/).
+>
+---
