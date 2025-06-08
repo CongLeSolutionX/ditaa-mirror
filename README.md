@@ -29,7 +29,7 @@ config:
     'flowchart': { 'htmlLabels': true, 'curve': 'linear' },
     'fontFamily': 'Andale Mono, monospace',
     'themeVariables': {
-      'primaryColor': '#2BB',
+      'primaryColor': '#22BB',
       'primaryTextColor': '#F8B229',
       'lineColor': '#F8B229',
       'primaryBorderColor': '#27AE60',
