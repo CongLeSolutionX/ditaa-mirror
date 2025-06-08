@@ -40,7 +40,7 @@ config:
     'flowchart': { 'htmlLabels': true, 'curve': 'linear' },
     'fontFamily': 'Andale Mono, monospace',
     'themeVariables': {
-      'primaryColor': '#22BB',
+      'primaryColor': '#FFFF',
       'primaryTextColor': '#F8B229',
       'lineColor': '#F8B229',
       'primaryBorderColor': '#27AE60',
@@ -62,7 +62,7 @@ flowchart TB
     end
 
     subgraph Web_Frontend["Web Frontend"]
-    style Web_Frontend fill:#218F,stroke:#333,stroke-width:1px
+    style Web_Frontend fill:#28F,stroke:#333,stroke-width:1px
     direction TB
         subgraph Controllers["Controllers"]
         style Controllers fill:#FFEF,stroke:#333,stroke-width:1px
